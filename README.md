@@ -4,7 +4,7 @@ Excel上のリストに従って半自動でOutlookを使ってメールを送�
 
 
 ## Overview
-A tool that sends e-mails semi-automatically and continuously while checking visually according to the information in the list on Excel. Allow attachment of different attachments for each destination. 
+A tool that sends e-mails semi-automatically and continuously while checking visually according to the information in the list on Excel. Allow attachment of different attachments for each destination.  
 Excel上のリストの情報に従ってメールを半自動（見て確認しながら）で連続的に送信するツール。宛先ごとに異なった添付ファイルを添付できるようにする。
 
 ## Usage
@@ -24,11 +24,20 @@ Image of the excel sheet.<br>
 <img src="https://github.com/okagen/xlsSendEmailViaOutlookSemiAutomatically/blob/master/img01.png?raw=true" width="600">
 
 ### step_2
-Click the [send mail] button, then some e-mail windows will appear. 
-
+Click the [send mail] button, then some e-mail windows will appear.   
 
 e-mail windows shown after click the [send mail] button.<br>
 <img src="https://github.com/okagen/xlsSendEmailViaOutlookSemiAutomatically/blob/master/img02.png?raw=true" width="600">
+
+Change the following line if you don't need to check the e-mail visually.  
+  - beore changing.
+~~~
+objMailItem.Display
+~~~
+  - afer changing.
+~~~
+objMailItem.Send
+~~~
 
 ## Requirement
 1. Excel 2013
